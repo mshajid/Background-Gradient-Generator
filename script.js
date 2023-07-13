@@ -7,11 +7,12 @@ let body = document.getElementById('gradient');
 // console.log(color1);
 // console.log(color2);
 
-color1.addEventListener("input", function() {
-    body.style.background = "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
-})
+// Refactoring the code
 
-color2.addEventListener("input", function() {
+function setGradient(){
     body.style.background = "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
-})
+}
+
+color1.addEventListener("input", setGradient);
+color2.addEventListener("input", setGradient);
 
